@@ -10,8 +10,7 @@ function add (x, y) {
     return x + y
 }
 
-let a = add (2, 10)
-console.log (a)
+console.log = add (2, 10)
 
 /*2. Multiply (2 points)
 Write a function named "multiply" which takes two arguments (as input variables) and returns their product.
@@ -22,12 +21,15 @@ For example, calling multiply(6, 4) should return a result of 24, which could be
 
 6 + 6 + 6 + 6 = 24*/
 
+function multiply (x, y) {
+  let product = 0
+  for (let i = 0; i < y; i ++) {
+  product = add (x, product)
+  }
+  return product
+}
 
-
-
-
-
-
+console.log = multiply (2, 10)
 
 
 /*3. Power/Exponentiation (2 points)
@@ -43,15 +45,15 @@ And to achieve the correct result for power(3, 4), we would want to multiply 3 b
 3 * 3 * 3 * 3 = 81
 See this Wikipedia article for more details on exponentiation.*/
 
-const power = function(base, exponent) {
-    let result = 1;
-    for (let count = 0; count < exponent; count++) {
-      result *= base;
+const power = function (base, exponent) {
+    let outcome = 1;
+    for (let i = 0; i < exponent; i ++) {
+      outcome *= base;
     }
-    return result;
-  };
+    return outcome;
+  }
   
-  console.log(power(2, 10));
+  console.log = power (2, 10);
 
 
 /*4. Factorial (2 points)
@@ -62,9 +64,33 @@ You may not use built-in math operators or functions (such as the * multiplicati
 A factorial multiplies a given number by every number below it. For example, "5 factorial" (usually symbolized by 5! in Mathematics) would be:
 
 5 * 4 * 3 * 2 * 1 = 120
-For example, calling factorial(4) should return a result of 24.
+For example, calling factorial(4) should return a result of 24.*/
 
-Bonus: Fibonacci (3 points)
+function factorial (x) {
+    let total = x
+    for (let i = x - 1; i > 0; i--) {
+        total = multipy (total, i) 
+    }
+    return total
+}
+
+console.log = factorial(5)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Bonus: Fibonacci (3 points)
 Write a function named "Fibonacci" which takes an argument n and returns the nth Fibonacci number.
 
 You may not use built-in math operators or functions (such as the * multiplication operator). Instead, you will use functions you wrote in earlier katas to write this function.
