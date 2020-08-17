@@ -10,7 +10,7 @@ function add (x, y) {
     return x + y
 }
 
-console.log = add (2, 10)
+console.log (add (2, 10))
 
 /*2. Multiply (2 points)
 Write a function named "multiply" which takes two arguments (as input variables) and returns their product.
@@ -29,7 +29,7 @@ function multiply (x, y) {
   return product
 }
 
-console.log = multiply (2, 10)
+console.log (multiply (2, 10))
 
 
 /*3. Power/Exponentiation (2 points)
@@ -48,12 +48,12 @@ See this Wikipedia article for more details on exponentiation.*/
 const power = function (base, exponent) {
     let outcome = 1;
     for (let i = 0; i < exponent; i ++) {
-      outcome *= base;
+      outcome = multiply (base, outcome);
     }
     return outcome;
   }
   
-  console.log = power (2, 10);
+  console.log (power (2, 10));
 
 
 /*4. Factorial (2 points)
@@ -68,27 +68,13 @@ For example, calling factorial(4) should return a result of 24.*/
 
 function factorial (x) {
     let total = x
-    for (let i = x - 1; i > 0; i--) {
-        total = multipy (total, i) 
+    for (let i = x - 1; i > 0; i --) {
+        total = multiply (total, i) 
     }
     return total
 }
 
-console.log = factorial(5)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log (factorial (5))
 
 /*Bonus: Fibonacci (3 points)
 Write a function named "Fibonacci" which takes an argument n and returns the nth Fibonacci number.
@@ -106,3 +92,4 @@ declaring a variable to keep track of a final result
 writing a FOR loop to consistently modify the result
 returning the result
 If you struggle for more than 15 minutes on any one thing, ask for help! This is an exercise in critical thinking, not torture.*/
+
